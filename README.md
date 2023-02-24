@@ -1,9 +1,14 @@
 # xdc (XSens DOT Connector)
 
-> Use an XSens DOT from pure python code, using `bleak`
+Connect to Xsens DOTs with Python 3 and Bleak on Mac OS.
+Forked from @adamkewley/xdc (archived).
 
-> ⚠️**EXPERIMENTAL** ⚠️: this is just something I'm hacking together to move a
-project forward. It is not a full-fat library, nor robust.
+## Requirements
+
+- Python 3.9 (May work on earlier pythons. Haven't tested.)
+- Bleak 0.19.x (`pip install bleak`)
+
+## About
 
 The Python code in here is a low-level [Bluetooth Low-Energy](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
 client implementation that can pull useful information from an [XSens DOT](https://www.xsens.com/xsens-dot). The
@@ -15,13 +20,8 @@ library code. The motivation for this is that other solutions out there involve 
 to have a system that is written in one language with minimal dependencies, which is why I
 wrote these bindings.
 
-## Requirements
 
-- `python>=3.9`: may work on earlier pythons. Haven't tested
-- `pip`: to install `bleak`. Not a hard requirement, if you know how to manually install packages
-
-
-## Instal Dependencies
+## Install Dependencies
 
 ```bash
 pip3 install -r requirements.txt
@@ -230,7 +230,7 @@ loop.run_until_complete(arun())
 
 ## General Tips & Tricks
 
-People have emailed me about using this library. To be clear, `xdc` is an **experimental** library. I am far too busy to
+People have emailed me (@adamkewley) about using this library. To be clear, `xdc` is an **experimental** library. I am far too busy to
 productionize it right now (with tests, full documentation etc.). This is why it feels a bit hacky.
 
 Just to answer some previous questions I have received about `xdc`:
